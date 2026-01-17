@@ -19,7 +19,7 @@ def main():
     root = tk.Tk()
     root.title("StudentHub - Lancement Minimal")
     root.geometry("300x200")
-    label = tk.Label(root, text="StudentHub fonctionne !")
+    label = tk.Label(root, text="StudentHub fonctionne et s'ouvre correctement!")
     label.pack(pady=50)
     root.mainloop()
 

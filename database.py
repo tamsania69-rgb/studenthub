@@ -1,5 +1,5 @@
 import sqlite3
-conn = sqlite3.connect("study.db")
+conn = sqlite3.connect("studyhub.db")
 cursor = conn.cursor()
 
 #  table Cours
