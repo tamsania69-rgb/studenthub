@@ -1,12 +1,12 @@
 import sqlite3
 from db.database import DB_PATH
 
-def add_course(title, semester, year):
+def add_course(name, semester, year):
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     cursor.execute(
-        "INSERT INTO courses (title, description, created_at, semester, year) VALUES (?, ?, CURRENT_TIMESTAMP, ?, ?)",
-        (title, "", semester, year)
+        "INSERT INTO courses (name, description, created_at, semester, year) VALUES (?, ?, CURRENT_TIMESTAMP, ?, ?)",
+        (name, "", semester, year)
     )
     conn.commit()
     conn.close()
