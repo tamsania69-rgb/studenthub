@@ -23,7 +23,8 @@ Faciliter la vie de l’étudiant en regroupant :
 - Git & GitHub (collaboration)
 
 ## 🚧 État du projet
-Étape 1 — Mise en place de la base technique et de l’architecture.
+Étape 1 — Mise en place de la base technique et de l’architecture (TERMINEE)
+Etape 2 - Developpement et structuration des differents services de l'application 
 
 ## 👥 Équipe
 Projet développé en collaboration entre Perez FOPA et Olivia TAMO
