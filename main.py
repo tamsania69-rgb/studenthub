@@ -25,3 +25,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+from services.course_manager import add_course, get_all_courses
+
+add_course("Maths", 1, 2026)
+print(get_all_courses())
