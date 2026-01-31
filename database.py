@@ -43,7 +43,27 @@ CREATE TABLE IF NOT EXISTS grade (
 )
 """)
 
+print("Toutes les tables ont été créées avec succès.")
+
+def initialiser_base():
+    connexion = sqlite3.connect("studyhub.db")
+    curseur = connexion.cursor()
+
+    curseur.execute("""
+    CREATE TABLE IF NOT EXISTS documents (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        titre TEXT,
+        matiere TEXT,
+        semestre TEXT,
+        chemin_fichier TEXT,
+        type_fichier TEXT,
+        date_ajout TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+    """)
+
+
 conn.commit()
 conn.close()
 
-print("Toutes les tables ont été créées avec succès.")
+   
+

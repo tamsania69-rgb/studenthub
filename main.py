@@ -1,5 +1,9 @@
 import sqlite3
 import tkinter as tk
+from database import initialiser_base
+import ui.document_ui
+
+initialiser_base()
 
 def init_db():
     conn = sqlite3.connect("studyhub.db")
