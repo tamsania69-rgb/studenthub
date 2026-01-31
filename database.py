@@ -7,6 +7,8 @@ cursor.execute("""
 CREATE TABLE IF NOT EXISTS cours (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
+    semester TEXT NOT NULL,
+    year INTEGER NOT NULL,
     description TEXT
 )
 """)
@@ -16,9 +18,10 @@ cursor.execute("""
 CREATE TABLE IF NOT EXISTS document (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
+    doc_type TEXT NOT NULL,
     content TEXT,
     course_id INTEGER,
-    FOREIGN KEY(course_id) REFERENCES Course(id)
+    FOREIGN KEY(course_id) REFERENCES course(id)
 )
 """)
 
@@ -27,6 +30,7 @@ cursor.execute("""
 CREATE TABLE IF NOT EXISTS event (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
+    event_type TEXT NOT NULL,
     date TEXT,
     description TEXT
 )
@@ -36,10 +40,10 @@ CREATE TABLE IF NOT EXISTS event (
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS grade (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    student_id INTEGER NOT NULL,
     course_id INTEGER,
-    score REAL NOT NULL,
-    FOREIGN KEY(course_id) REFERENCES Course(id)
+    value REAL NOT NULL,
+    max_value REAL NOT NULL,
+    FOREIGN KEY(course_id) REFERENCES course(id)
 )
 """)
 
