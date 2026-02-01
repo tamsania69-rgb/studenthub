@@ -1,6 +1,6 @@
 import sqlite3
 import tkinter as tk
-from database import initialiser_base
+from db.database import init_db
 import ui.document_ui
 
 initialiser_base()
